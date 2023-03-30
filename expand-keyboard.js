@@ -2,7 +2,7 @@
 // @name         Expand keyboard
 // @namespace    http://tampermonkey.net/
 // @match        https://configure.zsa.io/train/home
-// @version      0.1
+// @version      0.2
 // @description  Automatically expand the keyboard on the ZSA Oryx train page
 // @author       thenbe (https://github.com/thenbe)
 // @grant        none
@@ -17,9 +17,13 @@
 
 		if (iconShrinkElement) {
 			iconShrinkElement.click();
-			console.log('Click successful: The .icon-shrink element was clicked.');
+			console.log(
+				'[expand-keyboard.js] Click successful: The .icon-shrink element was clicked.',
+			);
 		} else {
-			console.log('Click failed: The .icon-shrink element was not found.');
+			console.log(
+				'[expand-keyboard.js] Click failed: The .icon-shrink element was not found.',
+			);
 		}
 	}
 
@@ -44,7 +48,7 @@
 
 	// Check if the page matches and observe DOM changes
 	if (window.location.href === 'https://configure.zsa.io/train/home') {
-		console.debug('Page matches');
+		console.debug('[expand-keyboard.js] Page matches');
 		observeDOM();
 	}
 })();
