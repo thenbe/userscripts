@@ -2,7 +2,7 @@
 // @name         Expand keyboard
 // @namespace    http://tampermonkey.net/
 // @include      /^https://configure.zsa.io/train.*$/
-// @version      0.3
+// @version      0.4
 // @description  Automatically expand the keyboard on the ZSA Oryx train page
 // @author       thenbe (https://github.com/thenbe)
 // @grant        none
@@ -47,7 +47,10 @@
 	}
 
 	// Check if the page matches and observe DOM changes
-	if (window.location.href === 'https://configure.zsa.io/train/home') {
+	if (
+		window.location.href === 'https://configure.zsa.io/train' ||
+		window.location.href === 'https://configure.zsa.io/train/home'
+	) {
 		console.debug('[expand-keyboard.js] Page matches');
 		observeDOM();
 	}
