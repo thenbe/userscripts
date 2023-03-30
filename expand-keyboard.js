@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Expand keyboard
 // @namespace    http://tampermonkey.net/
-// @match        https://configure.zsa.io/train/home
-// @version      0.2
+// @include      /^https://configure.zsa.io/train.*$/
+// @version      0.3
 // @description  Automatically expand the keyboard on the ZSA Oryx train page
 // @author       thenbe (https://github.com/thenbe)
 // @grant        none
